@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Web programming _ Personal Color Self Diagnosis</title>
+	<link href="https://fonts.googleapis.com/css?family=Jua&amp;subset=korean" rel="stylesheet">
+	<style> 
+		body{	
+			font-family: 'Jua', sans-serif;
+			text-align: center;
+			font-size: 20px;
+		}
+		ul li { 	
+			list-style: none;
+			text-align : center;
+			padding:  10px; 
+			display: inline;
+		}
+		#head{
+			font-size : 40px;
+			background-color: #B778FF;
+			margin: 10px; 
+			padding: 18px; 
+		}
+		div.color { 
+			position: absolute;
+			width: 300px; 
+			height:300px;
+			border-radius: 50%; 
+			background-color: white;
+			top: 500px;
+			animation: 50s myanim; 
+			animation-iteration-count: 1;
+			z-index: 0; 
+		}
+		@keyframes myanim {
+			0%  {left: 0;  } // 봄 빨강
+			2%  {left: 50%; transform: translateX(-50%) scale(2); background-color: #FF2424;} 
+			6%  {left: 50%; transform: translateX(-50%) scale(2); background-color: #FF2424; }
+			8%  {left: 100%; transform: translateX(-100%);} 
+
+			10%  {left: 0; transform: scale(1);}  // 여름 하늘색
+			12%  {left: 50%; transform: translateX(-50%) scale(2); background-color: #8BBCFF;} 
+			16%  {left: 50%; transform: translateX(-50%) scale(2); background-color: #8BBCFF;}
+			18%  {left: 100%; transform: translateX(-100%);}
+
+			20%  {left: 0; transform: scale(1);}  //가을 머스타드색
+			22%  {left: 50%;  transform: translateX(-50%) scale(2);background-color: #FFBB00;}  
+			26%  {left: 50%;  transform: translateX(-50%) scale(2);background-color: #FFBB00;}
+			28%  {left: 100%;  transform: translateX(-100%);}
+
+			30%  {left: 0;  transform: scale(1);} // 겨울 파란색
+			32%  {left: 50%;  transform: translateX(-50%) scale(2); background-color: #4641D9;}  
+			36%  {left: 50%;  transform: translateX(-50%) scale(2); background-color: #4641D9;}
+			38%  {left: 100%;  transform: translateX(-100%);}
+
+			40%  {left:0; transform: scale(1);} //가을 다홍색
+			42%  {left:50%;  transform: translateX(-50%) scale(2);  background-color: #FF5E00;} 
+			46%  {left:50%;  transform: translateX(-50%) scale(2);  background-color: #FF5E00;}
+			48%  {left:100%; transform: translateX(-100%);}
+
+			50%  {left:0;  transform: scale(1);}//여름 상아색
+			52%  {left:50%;  transform: translateX(-50%) scale(2); background-color: #FAF4C0;} 
+			56%  {left:50%;  transform: translateX(-50%) scale(2); background-color: #FAF4C0;}
+			58%  {left:100%;  transform: translateX(-100%);}
+
+			60%  {left:0;  transform: scale(1);} //봄 하늘색
+			62%  {left:50%;  transform: translateX(-50%) scale(2);background-color: #8BBDFF; } 
+			66%  {left:50%;  transform: translateX(-50%) scale(2);background-color: #8BBDFF;}
+			68%  {left:100%;  transform: translateX(-100%);}
+
+			70%  {left:0;  transform: scale(1);} // 겨울 자주색
+			72%  {left:50%;  transform: translateX(-50%) scale(2); background-color: #FF007F;} 
+			76%  {left:50%;  transform: translateX(-50%) scale(2); background-color: #FF007F;}
+			78%  {left:100%;  transform: translateX(-100%);}
+
+			80%  {left:0;  transform: scale(1);} //가을 살색
+			82%  {left:50%;  transform: translateX(-50%) scale(2); background-color: #FFC19E;} 
+			86%  {left:50%;  transform: translateX(-50%) scale(2); background-color: #FFC19E;}
+			88%  {left:100%;  transform: translateX(-100%);}
+
+			90%  {left:0;  transform: scale(1);} //겨울 라벤더
+			92%  {left:50%; transform: translateX(-50%) scale(2); background-color: #FFD9FA;} 
+			96%  {left:50%;  transform: translateX(-50%) scale(2); background-color: #FFD9FA;}
+			98%  {left:100%;  transform: translateX(-100%);}
+
+			100% {left:0px;  transform: scale(0);}
+		} 
+
+		img {
+			position: relative;
+			z-index: 100; 
+		}
+
+		form em{font-size : 24px;}
+		p { 
+			margin: auto;
+			width: 256px; 
+			height: 256px; 
+			font-size: 0px; 
+			background: white;
+			border-color: yellow; 
+			transition: width 2s height 2s border 2s, transform 2s; 
+			-webkit-transition: width 2s, height 2s, border 2s, -webkit-transform 2s; 
+		}
+		p:hover { 
+			margin: auto;
+			text-align : center;
+			border: 30px solid transparent; 
+			width: 400px; 
+			height: 600px; 
+			font-size : 20px;
+		}
+		p2 {
+			text-align: center;
+		}
+
+
+	</style>
+</head>
+<body>
+	<audio controls loop>
+	<source src="매장음악 브랜드라디오-5-Jazz-Bar.mp3" type="audio/mp3" >
+		Your browser does not support the audio element. 
+	</audio>	
+	<ul>
+		<li><img src="무명씨.jpg"></li>
+		<li>
+			<a id = "head">Do diagnose personal color for yourself!</a>
+		</li>
+		<li><img src="무명씨.jpg"></li>
+	</ul>
+	<br><br>
+	<p2>중앙에 오는 큰 동그라미 색상에 대해 얼굴의 차이를 확인해 보세요!</p2><br>
+	
+	
+	<img src="batsoo.jpg" width="520" height="500" alt = "batsoo 사진">
+	<div class = "color"></div>	
+
+	
+	<br><br><br><br><br><br><br>
+
+	<form> <em>잘 어울린다고 생각하는 색상 선택(중복허용):</em><br>
+		<input type="checkbox" name="color" value="1.()">1.(빨강)
+		<input type="checkbox" name="color" value="2.()">2.(하늘색)
+		<input type="checkbox" name="color" value="3.()">3.(머스타드)
+		<input type="checkbox" name="color" value="4.()">4.(파란색)
+		<input type="checkbox" name="color" value="5.()">5.(다홍색) 
+		<input type="checkbox" name="color" value="6.()">6.(상아색)
+		<input type="checkbox" name="color" value="7.()">7.(하늘색)
+		<input type="checkbox" name="color" value="8.()">8.(자주색)
+		<input type="checkbox" name="color" value="9.()">9.(살색)
+		<input type="checkbox" name="color" value="10.()">10.(라벤더)
+	</form>
+	<br>
+	<p1>화살표 위로 커서를 이동해 결과를 확인해 보세요!</p1>
+	<br>
+	<p>
+		<img src= "화살표.jpg">
+		<br>
+		1 &rarr; 봄 웜톤<br>
+		2 &rarr; 여름 쿨톤<br>
+		3 &rarr; 가을 웜톤<br>
+		4 &rarr; 겨울 쿨톤<br>
+		5 &rarr; 가을 웜톤<br>
+		6 &rarr; 여름 쿨톤<br>
+		7 &rarr; 봄 웜톤<br>
+		8 &rarr; 겨울 쿨톤<br>
+		9 &rarr; 가을 웜톤<br>
+		10 &rarr; 겨울 쿨톤<br>
+		<br><br>
+	</p>
+
+
+	
+
+
+</body>
+</html>
